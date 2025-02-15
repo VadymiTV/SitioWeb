@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Amor Efímero - Episodios 3 | TheDramaBox</title>
+  <title>Enamorada del tío de mi novio - Episodios 1 | Vadymi TV</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Estilos CSS -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -25,7 +24,6 @@
       overflow: hidden;
     }
 
-    /* --- Encabezado --- */
     header {
       background-color: #fff;
       padding: 10px 0;
@@ -41,7 +39,6 @@
     .logo {
       font-size: 1.5em;
       color: #e50914;
-      /* Rojo de Netflix */
       font-weight: bold;
       text-decoration: none;
     }
@@ -63,7 +60,6 @@
       font-weight: bold;
     }
 
-    /* --- Breadcrumb --- */
     .breadcrumb {
       padding: 10px 0;
       font-size: 0.8em;
@@ -79,7 +75,6 @@
       margin: 0 5px;
     }
 
-    /* --- Video Section --- */
     #video-section {
       padding: 20px 0;
       display: flex;
@@ -88,213 +83,170 @@
 
     .video-player {
       flex: 2;
-      /* Ocupa más espacio */
       position: relative;
-    }
-
-    .video-player #dailymotion-player {
-      width: 100%;
-      height: 400px;
-      /* Ajusta la altura */
     }
 
     /* --- Series Playlist --- */
     #series-playlist {
-      flex: 1;
-      /* Ocupa menos espacio */
-      background: #fff;
-      padding: 20px;
+      flex: 1; 
+      background: #fff; 
+      padding: 20px; 
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     #series-playlist h2 {
-      font-size: 1.2em;
-      margin-bottom: 10px;
+      font-size: 1.2em; 
+      margin-bottom: 10px; 
     }
 
-    #series-playlist ul {
-      list-style: none;
-      padding: 0;
+    #series-playlist ul { 
+      list-style: none; 
+      padding: 0; 
     }
 
-    #series-playlist li {
-      margin-bottom: 5px;
+    #series-playlist li { 
+      margin-bottom: 5px; 
     }
 
-    #series-playlist li a {
-      display: block;
-      padding: 5px 10px;
-      background-color: #eee;
-      color: #333;
-      text-decoration: none;
-      border-radius: 5px;
+    #series-playlist li a { 
+      display: block; 
+      padding: 5px 10px; 
+      background-color: #eee; 
+      color: #333; 
+      text-decoration: none; 
+      border-radius: 5px; 
     }
 
-    #series-playlist li a:hover {
-      background-color: #ddd;
+    #series-playlist li a:hover { 
+      background-color: #ddd; 
     }
 
-    /* --- Más info --- */
-    .episode-info {
-      padding: 20px 0;
-    }
-
-    .episode-info h1 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
-
-    .episode-info p {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .download-link {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #3498db;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-
-    /* --- Footer --- */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-  </style>
+    .episode-info { 
+        padding: 20px 0; 
+     }
+    
+     .episode-info h1 { 
+        font-size: 1.5em; 
+        margin-bottom: 10px; 
+     }
+    
+     .episode-info p { 
+        color:#555; 
+        line-height :1.6; 
+     }
+    
+     .download-link { 
+        display:inline-block; 
+        padding :10px20px; 
+        background-color :#3498db; 
+        color:white; 
+        text-decoration:none; 
+        border-radius :5px; 
+        margin-top :10px; 
+     }
+    
+     footer { 
+        background-color :#333; 
+        color:white; 
+        text-align:center; 
+        padding :20px0;  
+     }
+   </style>
 </head>
 
 <body>
 
-  <!-- Encabezado -->
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <a href="#" class="logo">TheDramaBox</a>
-        <nav>
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Categorías</a></li>
-            <li><a href="#">Español <i class="fas fa-caret-down"></i></a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+<header>
+   <div class="container">
+       <div class="header-content">
+           <a href="#" class="logo">TheDramaBox</a>
+           <nav>
+               <ul>
+                   <li><a href="#">Inicio</a></li>
+                   <li><a href="#">Categorías</a></li>
+                   <li><a href="#">Español <i class="fas fa-caret-down"></i></a></li>
+               </ul>
+           </nav>
+       </div>
+   </div>
+</header>
 
-  <!-- Breadcrumb -->
-  <div class="breadcrumb">
-    <div class="container">
-      <a href="#">Inicio</a>
-      <span>></span>
-      <a href="#">Romántica</a>
-      <span>></span>
-      <a href="#">El Amor Efímero</a>
-      <span>></span>
-      <span>Episodio 3</span>
-    </div>
-  </div>
+<div class="breadcrumb">
+   <div class="container">
+       <a href="#">Inicio</a>
+       <span>></span>
+       <a href="#">Romántica</a>
+       <span>></span>
+       <a href="#">El Amor Efímero</a>
+       <span>></span>
+       <span>Episodio</span>
+   </div>
+</div>
 
-  <!-- Contenido principal -->
-  <div class="container">
-    <section id="video-section">
-      <div class="video-player">
-        <!-- Reproductores de video (ocultos inicialmente) -->
-        <div id="dailymotion-player">
-          <script id="script-1" src="https://geo.dailymotion.com/player.js" data-video="x9dr5pu"
-            style="display: none;"></script>
-          <script id="script-2" src="https://geo.dailymotion.com/player.js" data-video="1ik3tqo2f0598185e98"
-            style="display: none;"></script>
-          <script id="script-3" src="https://geo.dailymotion.com/player.js" data-video="1ik3tr94j0c4b966abc"
-            style="display: none;"></script>
-        </div>
-      </div>
+<div class="container">
+   <section id="video-section">
+       <div class="video-player">
+           <!-- Contenedor para el reproductor de Dailymotion -->
+           <div id="dailymotion-player"></div>
+       </div>
 
-      <!-- Lista de episodios -->
-      <section id="series-playlist">
-        <h2>Episodios (3/35)</h2>
-        <ul>
-          <li><a href="#" data-script="script-1">1</a></li>
-          <li><a href="#" data-script="script-2">2</a></li>
-          <li><a href="#" data-script="script-3">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">6</a></li>
-          <li><a href="#">7</a></li>
-          <li><a href="#">8</a></li>
-          <li><a href="#">9</a></li>
-          <li><a href="#">10</a></li>
-          <li><a href="#">11</a></li>
-          <li><a href="#">12</a></li>
-          <li><a href="#">13</a></li>
-          <li><a href="#">14</a></li>
-          <li><a href="#">15</a></li>
-          <li><a href="#">16</a></li>
-          <li><a href="#">17</a></li>
-          <li><a href="#">18</a></li>
-          <li><a href="#">19</a></li>
-          <li><a href="#">20</a></li>
-          <li><a href="#">21</a></li>
-          <li><a href="#">22</a></li>
-          <li><a href="#">23</a></li>
-          <li><a href="#">24</a></li>
-          <li><a href="#">25</a></li>
-          <li><a href="#">26</a></li>
-          <li><a href="#">27</a></li>
-          <li><a href="#">28</a></li>
-          <li><a href="#">29</a></li>
-          <li><a href="#">30</a></li>
-          <li><a href="#">31</a></li>
-          <li><a href="#">32</a></li>
-          <li><a href="#">33</a></li>
-          <li><a href="#">34</a></li>
-          <li><a href="#">35</a></li>
-        </ul>
-      </section>
-    </section>
+       <!-- Lista de episodios -->
+       <section id="series-playlist">
+           <h2>Episodios (3/35)</h2>
+           <ul>
+               <li><a href="#" data-video="x9dr5pu">1</a></li>
+               <li><a href="#" data-video="1ik3tqo2f0598185e98">2</a></li>
+               <li><a href="#" data-video="1ik3tr94j0c4b966abc">3</a></li>
+               <!-- Agrega más episodios aquí -->
+           </ul>
+       </section>
+   </section>
 
-    <!-- Sección de información del episodio -->
-    <section class="episode-info">
-      <h1>El Amor Efímero - Episodio 3</h1>
-      <p>El Amor Efímero Episodios 3, Tina Garza, embarazada, regresó al país para asistir a la boda de su hermano menor, Tavio Garza,
-        presidente del Grupo Tiaca. Sin embargo, la prometida de Tavio creía que Tina era amante de su prometido y se enojó mucho, por
-        esta razón, Tina sufrió un aborto. Cuando Tavio descubrió la verdad en su boda, estaba muy furioso y quería vengarse a su
-        hermana. Al reconocer su error, la prometida de Tavio y su propia familia se arrepentían.</p>
-      <a href="#" class="download-link">Descargar</a>
-    </section>
+   <!-- Sección de información del episodio -->
+   <section class="episode-info">
+       <h1>El Amor Efímero - Episodio</h1>
+       <p>Descripción del episodio aquí.</p>
+       <a href="#" class="download-link">Descargar</a>
+   </section>
 
-    <!-- Pie de página -->
-    <footer>
-      <div class="container">
-        <p>TheDramaBox, Copyright &copy; 2024</p>
-      </div>
-    </footer>
+   <!-- Pie de página -->
+   <footer>
+       <div class="container">
+           <p>TheDramaBox, Copyright &copy; 2024</p>
+       </div>
+   </footer>
 
-    <!-- Script de Font Awesome (para el icono de "Play") -->
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+   <!-- Script de Dailymotion -->
+   <script src="https://api.dmcdn.net/all.js"></script>
 
-    <script>
-      document.querySelectorAll('#series-playlist li a').forEach(link => {
-        link.addEventListener('click', function(event) {
-          event.preventDefault(); // Evitar la navegación del enlace
+   <!-- Script para gestionar los videos -->
+   <script>
+       let player;
 
-          // Ocultar todos los scripts de video
-          document.querySelectorAll('#dailymotion-player script').forEach(script => {
-            script.style.display = 'none';
-          });
+       function loadVideo(videoId) {
+           // Si ya existe un reproductor, lo destruye
+           if (player) {
+               player.unload();
+           }
+           
+           // Crea un nuevo reproductor
+           player = DM.player("dailymotion-player", {
+               video : videoId,
+               width : "100%",
+               height : "400",
+               params : { autoplay : true } // Cambia a false si no deseas que inicie automáticamente
+           });
+       }
 
-          // Mostrar el script del video correspondiente
-          const scriptId = this.getAttribute('data-script');
-          const script = document.getElementById(scriptId);
-          script.style.display = 'block';
-        });
-      });
-    </script>
+       document.querySelectorAll('#series-playlist li a').forEach(link => {
+           link.addEventListener('click', function(event) {
+               event.preventDefault(); // Evitar la navegación del enlace
+               const videoId = this.getAttribute('data-video');
+               loadVideo(videoId); // Cargar el video correspondiente
+           });
+       });
+   </script>
+
 </body>
 
 </html>
