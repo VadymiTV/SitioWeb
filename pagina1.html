@@ -3,25 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página 1</title>
+    <title>Serie Completa - Título del Episodio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #505050;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ccc;
+            font-weight: bold;
+        }
+        /* Video Section */
+        #video-section {
+            padding: 20px;
+        }
+        #video-section iframe {
+            width: 100%;
+            height: 400px;
+        }
+        /* Series Playlist */
+        #series-playlist {
+            padding: 20px;
+            background: #fff;
+        }
+        #series-playlist ul {
+            list-style: none;
+            padding: 0;
+        }
+        #series-playlist li {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        #series-playlist li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+        #series-playlist li a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Página 1</h1>
-    <p>Ejemplo de página con script de Dailymotion.</p>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Nombre de la Serie</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Episodios</a></li>
+                    <li><a href="about.html">Acerca de</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Script de Dailymotion -->
-    <script src="https://geo.dailymotion.com/player/{Player ID}.js" data-video="x84sh87"></script>
+    <section id="video-section">
+        <div class="container">
+            <iframe 
+                src="https://www.dailymotion.com/embed/video/x5zhzj" 
+                frameborder="0" 
+                width="640" 
+                height="360" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
 
-    <iframe 
-    frameborder="0" 
-    width="640" 
-    height="360" 
-    src="https://www.dailymotion.com/embed/video/x5zhzj" 
-    allowfullscreen>
-</iframe>
-    
-    <a href="index.html">Volver al inicio</a>
+    <section id="series-playlist">
+        <div class="container">
+            <h2>Lista de Episodios</h2>
+            <ul>
+                <li><a href="#">Episodio 1: El Comienzo</a></li>
+                <li><a href="#">Episodio 2: La Búsqueda</a></li>
+                <li><a href="#">Episodio 3: El Encuentro</a></li>
+                <li><a href="#">Episodio 4: El Conflicto</a></li>
+                <li><a href="#">Episodio 5: La Resolución</a></li>
+                <!-- Agrega más episodios aquí -->
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Nombre de la Serie, Copyright &copy; 2024</p>
+        </div>
+    </footer>
 
 </body>
 </html>
