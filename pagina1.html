@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -108,7 +109,7 @@
       cursor: pointer;
     }
 
-    .video-player iframe {
+    .video-player #dailymotion-player {
       width: 100%;
       height: 400px;
       /* Ajusta la altura */
@@ -226,18 +227,18 @@
 
         <!-- Icono de "Play" (Font Awesome) -->
         <i class="far fa-play-circle play-icon"></i>
+
         <!-- Reproductor de video (oculto inicialmente) -->
-        <!-- <iframe src="https://www.dailymotion.com/embed/video/x5zhzj" frameborder="0" width="640"
-            height="360" allowfullscreen></iframe> -->
+        <div id="dailymotion-player"></div>
       </div>
 
       <!-- Lista de episodios -->
       <section id="series-playlist">
         <h2>Episodios (3/35)</h2>
         <ul>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
+          <li><a href="#" data-video="1ik3tpvchc6ef74a55a">1</a></li>
+          <li><a href="#" data-video="1ik3tqo2f0598185e98">2</a></li>
+          <li><a href="#" data-video="1ik3tr94j0c4b966abc">3</a></li>
           <li><a href="#">4</a></li>
           <li><a href="#">5</a></li>
           <li><a href="#">6</a></li>
@@ -276,10 +277,7 @@
     <!-- Sección de información del episodio -->
     <section class="episode-info">
       <h1>El Amor Efímero - Episodio 3</h1>
-      <p>El Amor Efímero Episodios 3, Tina Garza, embarazada, regresó al país para asistir a la boda de su hermano menor, Tavio Garza,
-        presidente del Grupo Tiaca. Sin embargo, la prometida de Tavio creía que Tina era amante de su prometido y se enojó mucho, por
-        esta razón, Tina sufrió un aborto. Cuando Tavio descubrió la verdad en su boda, estaba muy furioso y quería vengarse a su
-        hermana. Al reconocer su error, la prometida de Tavio y su propia familia se arrepentían.</p>
+      <p>El Amor Efímero Episodios 3, Tina Garza, embarazada, regresó al país para asistir a la boda de su hermano menor, Tavio Garza, presidente del Grupo Tiaca. Sin embargo, la prometida de Tavio creía que Tina era amante de su prometido y se enojó mucho, por esta razón, Tina sufrió un aborto. Cuando Tavio descubrió la verdad en su boda, estaba muy furioso y quería vengarse a su hermana. Al reconocer su error, la prometida de Tavio y su propia familia se arrepentían.</p>
       <a href="#" class="download-link">Descargar</a>
     </section>
 
@@ -289,7 +287,25 @@
         <p>TheDramaBox, Copyright &copy; 2024</p>
       </div>
     </footer>
+    <script>
+      function loadDailymotionPlayer(videoId) {
+        const playerContainer = document.getElementById('dailymotion-player');
+        playerContainer.innerHTML = ''; // Limpiar contenido anterior
 
+        const script = document.createElement('script');
+        script.src = `https://geo.dailymotion.com/player/{Player ID}.js`;
+        script.setAttribute('data-video', videoId);
+        playerContainer.appendChild(script);
+      }
+
+      document.querySelectorAll('#series-playlist li a').forEach(link => {
+        link.addEventListener('click', function(event) {
+          event.preventDefault(); // Evitar la navegación del enlace
+          const videoId = this.getAttribute('data-video');
+          loadDailymotionPlayer(videoId);
+        });
+      });
+    </script>
     <!-- Script de Font Awesome (para el icono de "Play") -->
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
