@@ -88,6 +88,7 @@
             max-width: 640px;
         }
 
+        /* --- Series Playlist --- */
         #series-playlist {
             flex: 1;
             background: #fff;
@@ -188,15 +189,18 @@
         <section id="video-section">
             <div class="video-player">
                 <!-- Container where the Dailymotion player will be embedded -->
-                <div id="dailymotion-player"></div>
+                <div id="dailymotion-player">
+                    <script id="dailymotion-script" src="https://geo.dailymotion.com/player.js"
+                        data-video="x84sh87"></script>
+                </div>
             </div>
 
             <section id="series-playlist">
                 <h2>Episodios (3/35)</h2>
                 <ul>
-                    <li><a href="#" data-video="x9dr5pu">Episodio 1</a></li>
-                    <li><a href="#" data-video="1ik3tqo2f0598185e98">Episodio 2</a></li>
-                    <li><a href="#" data-video="1ik3tr94j0c4b966abc">Episodio 3</a></li>
+                    <li><a href="#" data-episode="1">Episodio 1</a></li>
+                    <li><a href="#" data-episode="2">Episodio 2</a></li>
+                    <li><a href="#" data-episode="3">Episodio 3</a></li>
                 </ul>
             </section>
         </section>
@@ -212,55 +216,46 @@
             </div>
         </footer>
 
-        <script src="https://api.dmcdn.net/all.js"></script>
-<script>
-    DM.onready(function () {
-        const playerContainer = document.getElementById("dailymotion-player");
-        let player = null;
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const playerContainer = document.getElementById("dailymotion-player");
+                const dailymotionScript = document.getElementById("dailymotion-script");
 
-        function loadVideo(videoId) {
-            // Asegúrate de destruir cualquier reproductor existente antes de crear uno nuevo
-            if (player) {
-                player.destroy();
-            }
+                function loadVideo(episode) {
+                    fetch('videos.json')
+                        .then(response => response.json())
+                        .then(videos => {
+                            const videoId = videos[episode];
+                            if (videoId) {
+                                // Update the data-video attribute
+                                dailymotionScript.setAttribute('data-video', videoId);
 
-            // Limpiar el contenedor antes de cargar un nuevo video
-            playerContainer.innerHTML = '';
+                                // Re-create the script element to force the player to reload
+                                const newScript = document.createElement('script');
+                                newScript.src = dailymotionScript.src;
+                                newScript.id = 'dailymotion-script';
+                                newScript.setAttribute('data-video', videoId);
 
-            // Crear un nuevo reproductor Dailymotion
-            player = DM.player(playerContainer, {
-                video: videoId,
-                width: '100%',
-                height: '360px',
-                params: {
-                    autoplay: true,
-                    mute: false,
-                    controls: true,
-                    "sharing-enable": false,
-                    "ui-logo": false,
-                    "ui-start-screen-info": false
+                                // Replace the old script with the new script
+                                playerContainer.innerHTML = '';
+                                playerContainer.appendChild(newScript);
+                            } else {
+                                console.error(`Video ID not found for episode ${episode}`);
+                            }
+                        })
+                        .catch(error => console.error('Error loading videos.json:', error));
                 }
+
+                const episodeLinks = document.querySelectorAll('#series-playlist li a');
+                episodeLinks.forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const episode = this.getAttribute('data-episode');
+                        loadVideo(episode);
+                    });
+                });
             });
-        }
-
-        const episodeLinks = document.querySelectorAll('#series-playlist li a');
-        episodeLinks.forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
-                const videoId = this.getAttribute('data-video');
-                loadVideo(videoId);
-            });
-        });
-
-        // Inicializar el primer episodio al cargar la página si es necesario
-        const firstEpisode = episodeLinks[0];
-        if (firstEpisode) {
-            const videoId = firstEpisode.getAttribute('data-video');
-            loadVideo(videoId);
-        }
-    });
-</script>
-
+        </script>
 </body>
 
 </html>
