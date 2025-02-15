@@ -229,14 +229,13 @@
                             if (videoId) {
                                 // Update the data-video attribute
                                 dailymotionScript.setAttribute('data-video', videoId);
+                                dailymotionScript.src = `https://geo.dailymotion.com/player.js`;
 
                                 // Re-create the script element to force the player to reload
                                 const newScript = document.createElement('script');
                                 newScript.src = dailymotionScript.src;
                                 newScript.id = 'dailymotion-script';
                                 newScript.setAttribute('data-video', videoId);
-
-                                // Replace the old script with the new script
                                 playerContainer.innerHTML = '';
                                 playerContainer.appendChild(newScript);
                             } else {
