@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enamorada del tío de mi novio - Episodios 1 | Vadymi TV</title>
+  <title>Enamorada del tío de mi novio - Episodios | Vadymi TV</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -100,58 +100,30 @@
     }
 
     #series-playlist ul { 
-      list-style: none; 
-      padding: 0; 
-    }
-
-    #series-playlist li { 
-      margin-bottom: 5px; 
-    }
-
-    #series-playlist li a { 
-      display: block; 
-      padding: 5px 10px; 
-      background-color: #eee; 
-      color: #333; 
-      text-decoration: none; 
-      border-radius: 5px; 
-    }
-
-    #series-playlist li a:hover { 
-      background-color: #ddd; 
-    }
-
-    .episode-info { 
-        padding: 20px 0; 
+        list-style:none; 
+        padding :00;  
      }
     
-     .episode-info h1 { 
-        font-size: 1.5em; 
-        margin-bottom: 10px; 
+     series-playlist li {  
+        margin-bottom :5px; 
      }
     
-     .episode-info p { 
-        color:#555; 
-        line-height :1.6; 
+     series-playlist li a {  
+        display:block;padding :5px10px;background-color:#eee;color:#333;text-decoration:none;border-radius :5px;margin-top ;  
      }
     
-     .download-link { 
-        display:inline-block; 
-        padding :10px20px; 
-        background-color :#3498db; 
-        color:white; 
-        text-decoration:none; 
-        border-radius :5px; 
-        margin-top :10px; 
+     series-playlist li a:hover {  
+        background-color:#ddd;  
      }
     
-     footer { 
-        background-color :#333; 
-        color:white; 
-        text-align:center; 
-        padding :20px0;  
+     episode-info {  
+        padding :20px ;  
      }
+    
+     footer {  
+        background-color:#333;color:white;text-align:center;padding :20px ; }  
    </style>
+
 </head>
 
 <body>
@@ -159,7 +131,7 @@
 <header>
    <div class="container">
        <div class="header-content">
-           <a href="#" class="logo">TheDramaBox</a>
+           <a href="#" class="logo">Vadymi TV</a>
            <nav>
                <ul>
                    <li><a href="#">Inicio</a></li>
@@ -177,7 +149,7 @@
        <span>></span>
        <a href="#">Romántica</a>
        <span>></span>
-       <a href="#">El Amor Efímero</a>
+       <a href="#">Enamorada del tío de mi novio</a>
        <span>></span>
        <span>Episodio</span>
    </div>
@@ -185,34 +157,31 @@
 
 <div class="container">
    <section id="video-section">
-       <div class="video-player">
-           <!-- Contenedor para el reproductor de Dailymotion -->
-           <div id="dailymotion-player"></div>
-       </div>
+       <!-- Contenedor para el reproductor de Dailymotion -->
+       <div id="dailymotion-player" style="display:none;"></div>
 
        <!-- Lista de episodios -->
        <section id="series-playlist">
            <h2>Episodios (3/35)</h2>
            <ul>
-               <li><a href="#" data-video="x9dr5pu">1</a></li>
-               <li><a href="#" data-video="1ik3tqo2f0598185e98">2</a></li>
-               <li><a href="#" data-video="1ik3tr94j0c4b966abc">3</a></li>
-               <!-- Agrega más episodios aquí -->
+               <!-- Cada enlace tiene un atributo data-video con el ID del video -->
+               <li><a href="#" data-video="x9dr5pu">Episodio 1</a></li>
+               <li><a href="#" data-video="1ik3tqo2f0598185e98">Episodio 2</a></li>
+               <li><a href="#" data-video="1ik3tr94j0c4b966abc">Episodio 3</a></li>
            </ul>
        </section>
    </section>
 
    <!-- Sección de información del episodio -->
    <section class="episode-info">
-       <h1>El Amor Efímero - Episodio</h1>
-       <p>Descripción del episodio aquí.</p>
-       <a href="#" class="download-link">Descargar</a>
+       <h1>Enamorada del tío de mi novio - Episodio</h1>
+       <p>Selecciona un episodio para comenzar a verlo.</p>
    </section>
 
    <!-- Pie de página -->
    <footer>
        <div class="container">
-           <p>TheDramaBox, Copyright &copy; 2024</p>
+           <p>Vadymi TV, Copyright &copy; 2024</p>
        </div>
    </footer>
 
@@ -226,9 +195,13 @@
        function loadVideo(videoId) {
            // Si ya existe un reproductor, lo destruye
            if (player) {
-               player.unload();
+               player.destroy();
            }
            
+           // Muestra el contenedor del reproductor
+           const playerContainer = document.getElementById("dailymotion-player");
+           playerContainer.style.display = "block";
+
            // Crea un nuevo reproductor
            player = DM.player("dailymotion-player", {
                video : videoId,
@@ -241,8 +214,12 @@
        document.querySelectorAll('#series-playlist li a').forEach(link => {
            link.addEventListener('click', function(event) {
                event.preventDefault(); // Evitar la navegación del enlace
+               
+               // Obtiene el ID del video seleccionado
                const videoId = this.getAttribute('data-video');
-               loadVideo(videoId); // Cargar el video correspondiente
+               
+               // Carga el video correspondiente
+               loadVideo(videoId);
            });
        });
    </script>
