@@ -2,227 +2,262 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enamorada del tío de mi novio - Episodios | Vadymi TV</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f2f5;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enamorada del tío de mi novio - Episodios | Vadymi TV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      overflow: hidden;
-    }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
 
-    header {
-      background-color: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .logo {
-      font-size: 1.5em;
-      color: #e50914;
-      font-weight: bold;
-      text-decoration: none;
-    }
+        .logo {
+            font-size: 1.5em;
+            color: #e50914;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
 
-    nav li {
-      margin-left: 20px;
-    }
+        nav li {
+            margin-left: 20px;
+        }
 
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
 
-    .breadcrumb {
-      padding: 10px 0;
-      font-size: 0.8em;
-      color: #777;
-    }
+        .breadcrumb {
+            padding: 10px 0;
+            font-size: 0.8em;
+            color: #777;
+        }
 
-    .breadcrumb a {
-      color: #777;
-      text-decoration: none;
-    }
+        .breadcrumb a {
+            color: #777;
+            text-decoration: none;
+        }
 
-    .breadcrumb span {
-      margin: 0 5px;
-    }
+        .breadcrumb span {
+            margin: 0 5px;
+        }
 
-    #video-section {
-      padding: 20px 0;
-      display: flex;
-      gap: 20px;
-    }
+        #video-section {
+            padding: 20px 0;
+            display: flex;
+            gap: 20px;
+        }
 
-    .video-player {
-      flex: 2;
-      position: relative;
-    }
+        .video-player {
+            flex: 2;
+            position: relative;
+        }
 
-    /* --- Series Playlist --- */
-    #series-playlist {
-      flex: 1; 
-      background: #fff; 
-      padding: 20px; 
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+        /* --- Series Playlist --- */
+        #series-playlist {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    #series-playlist h2 {
-      font-size: 1.2em; 
-      margin-bottom: 10px; 
-    }
+        #series-playlist h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
 
-    #series-playlist ul { 
-        list-style:none; 
-        padding :00;  
-     }
-    
-     series-playlist li {  
-        margin-bottom :5px; 
-     }
-    
-     series-playlist li a {  
-        display:block;padding :5px10px;background-color:#eee;color:#333;text-decoration:none;border-radius :5px;margin-top ;  
-     }
-    
-     series-playlist li a:hover {  
-        background-color:#ddd;  
-     }
-    
-     episode-info {  
-        padding :20px ;  
-     }
-    
-     footer {  
-        background-color:#333;color:white;text-align:center;padding :20px ; }  
-   </style>
+        #series-playlist ul {
+            list-style: none;
+            padding: 0;
+        }
 
+        #series-playlist li {
+            margin-bottom: 5px;
+        }
+
+        #series-playlist li a {
+            display: block;
+            padding: 5px 10px;
+            background-color: #eee;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #series-playlist li a:hover {
+            background-color: #ddd;
+        }
+
+        .episode-info {
+            padding: 20px 0;
+        }
+
+        .episode-info h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .episode-info p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .download-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-   <div class="container">
-       <div class="header-content">
-           <a href="#" class="logo">Vadymi TV</a>
-           <nav>
-               <ul>
-                   <li><a href="#">Inicio</a></li>
-                   <li><a href="#">Categorías</a></li>
-                   <li><a href="#">Español <i class="fas fa-caret-down"></i></a></li>
-               </ul>
-           </nav>
-       </div>
-   </div>
-</header>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Vadymi TV</a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Categorías</a></li>
+                        <li><a href="#">Español <i class="fas fa-caret-down"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-<div class="breadcrumb">
-   <div class="container">
-       <a href="#">Inicio</a>
-       <span>></span>
-       <a href="#">Romántica</a>
-       <span>></span>
-       <a href="#">Enamorada del tío de mi novio</a>
-       <span>></span>
-       <span>Episodio</span>
-   </div>
-</div>
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="#">Inicio</a>
+            <span>></span>
+            <a href="#">Romántica</a>
+            <span>></span>
+            <a href="#">Enamorada del tío de mi novio</a>
+            <span>></span>
+            <span>Episodio</span>
+        </div>
+    </div>
 
-<div class="container">
-   <section id="video-section">
-       <!-- Contenedor para el reproductor de Dailymotion -->
-       <div id="dailymotion-player" style="display:none;"></div>
+    <div class="container">
+        <section id="video-section">
+            <!-- Contenedor para el reproductor de Dailymotion -->
+            <div id="dailymotion-player" style="width: 640px; height: 360px;"></div>
 
-       <!-- Lista de episodios -->
-       <section id="series-playlist">
-           <h2>Episodios (3/35)</h2>
-           <ul>
-               <!-- Cada enlace tiene un atributo data-video con el ID del video -->
-               <li><a href="#" data-video="x9dr5pu">Episodio 1</a></li>
-               <li><a href="#" data-video="1ik3tqo2f0598185e98">Episodio 2</a></li>
-               <li><a href="#" data-video="1ik3tr94j0c4b966abc">Episodio 3</a></li>
-           </ul>
-       </section>
-   </section>
+            <!-- Lista de episodios -->
+            <section id="series-playlist">
+                <h2>Episodios (3/35)</h2>
+                <ul>
+                    <!-- Cada enlace tiene un atributo data-video con el ID del video -->
+                    <li><a href="#" data-video="x9dr5pu">Episodio 1</a></li>
+                    <li><a href="#" data-video="1ik3tqo2f0598185e98">Episodio 2</a></li>
+                    <li><a href="#" data-video="1ik3tr94j0c4b966abc">Episodio 3</a></li>
+                </ul>
+            </section>
+        </section>
 
-   <!-- Sección de información del episodio -->
-   <section class="episode-info">
-       <h1>Enamorada del tío de mi novio - Episodio</h1>
-       <p>Selecciona un episodio para comenzar a verlo.</p>
-   </section>
+        <!-- Sección de información del episodio -->
+        <section class="episode-info">
+            <h1>Enamorada del tío de mi novio - Episodio</h1>
+            <p>Selecciona un episodio para comenzar a verlo.</p>
+        </section>
 
-   <!-- Pie de página -->
-   <footer>
-       <div class="container">
-           <p>Vadymi TV, Copyright &copy; 2024</p>
-       </div>
-   </footer>
+        <!-- Pie de página -->
+        <footer>
+            <div class="container">
+                <p>Vadymi TV, Copyright &copy; 2024</p>
+            </div>
+        </footer>
 
-   <!-- Script de Dailymotion -->
-   <script src="https://api.dmcdn.net/all.js"></script>
+        <!-- Script de Dailymotion -->
+        <script src="https://api.dmcdn.net/all.js"></script>
 
-   <!-- Script para gestionar los videos -->
-   <script>
-       let player;
+        <!-- Script para gestionar los videos -->
+        <script>
+            let player;
 
-       function loadVideo(videoId) {
-           // Si ya existe un reproductor, lo destruye
-           if (player) {
-               player.destroy();
-           }
-           
-           // Muestra el contenedor del reproductor
-           const playerContainer = document.getElementById("dailymotion-player");
-           playerContainer.style.display = "block";
+            function loadVideo(videoId) {
+                const playerContainer = document.getElementById("dailymotion-player");
 
-           // Crea un nuevo reproductor
-           player = DM.player("dailymotion-player", {
-               video : videoId,
-               width : "100%",
-               height : "400",
-               params : { autoplay : true } // Cambia a false si no deseas que inicie automáticamente
-           });
-       }
+                // Destroy existing player if it exists
+                if (player) {
+                    player.destroy();
+                }
 
-       document.querySelectorAll('#series-playlist li a').forEach(link => {
-           link.addEventListener('click', function(event) {
-               event.preventDefault(); // Evitar la navegación del enlace
-               
-               // Obtiene el ID del video seleccionado
-               const videoId = this.getAttribute('data-video');
-               
-               // Carga el video correspondiente
-               loadVideo(videoId);
-           });
-       });
-   </script>
+                // Show the player container
+                playerContainer.style.display = "block";
+
+                // Create a new player
+                player = DM.player(playerContainer, { // Pass the container element directly
+                    video: videoId,
+                    width: "100%",
+                    height: "360px",
+                    params: {
+                        autoplay: true,
+                        "ui-logo": false,   //hide logo
+                        "ui-start-screen-info": false,  //hide title
+                        "sharing-enable": false // hide share buttons
+                    }
+                });
+            }
+
+
+            document.querySelectorAll('#series-playlist li a').forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // Evitar la navegación del enlace
+
+                    // Obtiene el ID del video seleccionado
+                    const videoId = this.getAttribute('data-video');
+
+                    // Carga el video correspondiente
+                    loadVideo(videoId);
+                });
+            });
+        </script>
 
 </body>
 
