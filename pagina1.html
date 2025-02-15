@@ -1,139 +1,41 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serie Completa - Título del Episodio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #505050;
-            color: white;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            overflow: hidden;
-        }
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header .highlight, header .current a {
-            color: #e8491d;
-            font-weight: bold;
-        }
-        header a:hover {
-            color: #ccc;
-            font-weight: bold;
-        }
-        /* Video Section */
-        #video-section {
-            padding: 20px;
-        }
-        #video-section iframe {
-            width: 100%;
-            height: 400px;
-        }
-        /* Series Playlist */
-        #series-playlist {
-            padding: 20px;
-            background: #fff;
-        }
-        #series-playlist ul {
-            list-style: none;
-            padding: 0;
-        }
-        #series-playlist li {
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
-        }
-        #series-playlist li a {
-            color: #333;
-            text-decoration: none;
-            display: block;
-        }
-        #series-playlist li a:hover {
-            background-color: #f0f0f0;
-        }
-    </style>
-</head>
-<body>
+<!-- Encabezado -->
+<header>
+  <div class="header-ad">
+    <img src="images/adsmobile.jpg" alt="Publicidad">
+    <div class="header-ad-content">
+      <img src="images/logo.png" alt="DramaBox Logo">
+      <p>WATCH MOVIES FULL HD NO ADS FOR FREE</p>
+      <button>Open</button>
+    </div>
+  </div>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/browse">Categorías</a>
+    <!-- Selector de idioma -->
+    <div class="language-selector">
+      <span>Español</span>
+      <!-- Lista de idiomas -->
+    </div>
+    <!-- Barra de búsqueda -->
+    <input type="search" placeholder="Buscar">
+  </nav>
+</header>
 
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1><span class="highlight">Nombre de la Serie</span></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">Episodios</a></li>
-                    <li><a href="about.html">Acerca de</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!-- Video -->
+<div class="video-container">
+  <img src="https://vres.dramaboxdb.com/00/7x7/77x6/776x8/77680100014/583776600_3/583776600.mp4.jpg" alt="Vista previa" class="video-preview">
+  <video controls>
+    <source src="URL_DEL_VIDEO" type="video/mp4">
+  </video>
+</div>
 
-    <section id="video-section">
-        <div class="container">
-            <iframe 
-                src="https://www.dailymotion.com/embed/video/x5zhzj" 
-                frameborder="0" 
-                width="640" 
-                height="360" 
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
-
-    <section id="series-playlist">
-        <div class="container">
-            <h2>Lista de Episodios</h2>
-            <ul>
-                <li><a href="#">Episodio 1: El Comienzo</a></li>
-                <li><a href="#">Episodio 2: La Búsqueda</a></li>
-                <li><a href="#">Episodio 3: El Encuentro</a></li>
-                <li><a href="#">Episodio 4: El Conflicto</a></li>
-                <li><a href="#">Episodio 5: La Resolución</a></li>
-                <!-- Agrega más episodios aquí -->
-            </ul>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>Nombre de la Serie, Copyright &copy; 2024</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+<!-- Lista de episodios -->
+<div class="episode-list">
+  <h2>Episodios (3/35)</h2>
+  <ul>
+    <li><a href="#">Episodio 1</a></li>
+    <li><a href="#">Episodio 2</a></li>
+    <li><a href="#" class="current">Episodio 3</a></li>
+    <!-- Más episodios -->
+  </ul>
+</div>
