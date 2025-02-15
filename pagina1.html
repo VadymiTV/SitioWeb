@@ -228,17 +228,21 @@
         <!-- Icono de "Play" (Font Awesome) -->
         <i class="far fa-play-circle play-icon"></i>
 
-        <!-- Reproductor de video (oculto inicialmente) -->
-        <div id="dailymotion-player"></div>
+        <!-- Reproductores de video (ocultos inicialmente) -->
+        <div id="dailymotion-player">
+          <script id="script-1" src="https://geo.dailymotion.com/player/{Player ID}.js" data-video="1ik3tpvchc6ef74a55a" style="display: none;"></script>
+          <script id="script-2" src="https://geo.dailymotion.com/player/{Player ID}.js" data-video="1ik3tqo2f0598185e98" style="display: none;"></script>
+          <script id="script-3" src="https://geo.dailymotion.com/player/{Player ID}.js" data-video="1ik3tr94j0c4b966abc" style="display: none;"></script>
+        </div>
       </div>
 
       <!-- Lista de episodios -->
       <section id="series-playlist">
         <h2>Episodios (3/35)</h2>
         <ul>
-          <li><a href="#" data-video="1ik3tpvchc6ef74a55a">1</a></li>
-          <li><a href="#" data-video="1ik3tqo2f0598185e98">2</a></li>
-          <li><a href="#" data-video="1ik3tr94j0c4b966abc">3</a></li>
+          <li><a href="#" data-script="script-1">1</a></li>
+          <li><a href="#" data-script="script-2">2</a></li>
+          <li><a href="#" data-script="script-3">3</a></li>
           <li><a href="#">4</a></li>
           <li><a href="#">5</a></li>
           <li><a href="#">6</a></li>
@@ -274,10 +278,14 @@
         </ul>
       </section>
     </section>
+
     <!-- Sección de información del episodio -->
     <section class="episode-info">
       <h1>El Amor Efímero - Episodio 3</h1>
-      <p>El Amor Efímero Episodios 3, Tina Garza, embarazada, regresó al país para asistir a la boda de su hermano menor, Tavio Garza, presidente del Grupo Tiaca. Sin embargo, la prometida de Tavio creía que Tina era amante de su prometido y se enojó mucho, por esta razón, Tina sufrió un aborto. Cuando Tavio descubrió la verdad en su boda, estaba muy furioso y quería vengarse a su hermana. Al reconocer su error, la prometida de Tavio y su propia familia se arrepentían.</p>
+      <p>El Amor Efímero Episodios 3, Tina Garza, embarazada, regresó al país para asistir a la boda de su hermano menor, Tavio Garza,
+        presidente del Grupo Tiaca. Sin embargo, la prometida de Tavio creía que Tina era amante de su prometido y se enojó mucho, por
+        esta razón, Tina sufrió un aborto. Cuando Tavio descubrió la verdad en su boda, estaba muy furioso y quería vengarse a su
+        hermana. Al reconocer su error, la prometida de Tavio y su propia familia se arrepentían.</p>
       <a href="#" class="download-link">Descargar</a>
     </section>
 
@@ -287,27 +295,27 @@
         <p>TheDramaBox, Copyright &copy; 2024</p>
       </div>
     </footer>
+
+    <!-- Script de Font Awesome (para el icono de "Play") -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
     <script>
-      function loadDailymotionPlayer(videoId) {
-        const playerContainer = document.getElementById('dailymotion-player');
-        playerContainer.innerHTML = ''; // Limpiar contenido anterior
-
-        const script = document.createElement('script');
-        script.src = `https://geo.dailymotion.com/player/{Player ID}.js`;
-        script.setAttribute('data-video', videoId);
-        playerContainer.appendChild(script);
-      }
-
       document.querySelectorAll('#series-playlist li a').forEach(link => {
         link.addEventListener('click', function(event) {
           event.preventDefault(); // Evitar la navegación del enlace
-          const videoId = this.getAttribute('data-video');
-          loadDailymotionPlayer(videoId);
+
+          // Ocultar todos los scripts de video
+          document.querySelectorAll('#dailymotion-player script').forEach(script => {
+            script.style.display = 'none';
+          });
+
+          // Mostrar el script del video correspondiente
+          const scriptId = this.getAttribute('data-script');
+          const script = document.getElementById(scriptId);
+          script.style.display = 'block';
         });
       });
     </script>
-    <!-- Script de Font Awesome (para el icono de "Play") -->
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
